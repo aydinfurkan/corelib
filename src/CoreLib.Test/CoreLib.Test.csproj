@@ -4,6 +4,14 @@
         <TargetFramework>net5.0</TargetFramework>
     </PropertyGroup>
 
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net5.0</TargetFramework>
+        <Authors>Furkan</Authors>
+        <Company>GitHub</Company>
+        <RepositoryUrl>https://github.com/aydinfurkan/corelib</RepositoryUrl>
+    </PropertyGroup>
+    
     <ItemGroup>
       <PackageReference Include="FluentValidation.AspNetCore" Version="10.1.0" />
       <PackageReference Include="JunitXml.TestLogger" Version="2.1.10" />
