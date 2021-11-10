@@ -13,11 +13,9 @@ jobs:
       - name: Deploy on nuget
         env:
           CR_PAT: ${{ secrets.CR_PAT }}
-          OWNER: aydinfurkan
-          REPO: corelib
 
         run: |
           dotnet pack -c Release /p:Version=0.0.${{ github.run_number }}
-          dotnet nuget add source "https://nuget.pkg.github.com/$OWNER/$REPO/index.json" --name github --username $OWNER --password $CR_PAT --store-password-in-clear-text
+          dotnet nuget add source "https://nuget.pkg.github.com/OWNER/index.json" --name github --username USERNAME --password $CR_PAT --store-password-in-clear-text
           dotnet nuget push "**/*.nupkg" --api-key $CR_PAT --source "github"
       
