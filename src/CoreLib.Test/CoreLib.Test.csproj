@@ -3,7 +3,7 @@
     <PropertyGroup>
         <TargetFramework>net5.0</TargetFramework>
         <PackageId>CoreLibTest</PackageId>
-        <RepositoryUrl>https://github.com/aydinfurkan/corelib-test</RepositoryUrl>
+        <RepositoryUrl>https://github.com/aydinfurkan/corelib</RepositoryUrl>
     </PropertyGroup>
     
     <ItemGroup>
