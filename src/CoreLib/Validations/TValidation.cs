@@ -6,7 +6,7 @@ namespace CoreLib.Validations
 {
     public static class TValidation
     {
-        public static IServiceCollection AddValidation<T>(this IServiceCollection services)
+        public static IServiceCollection AddTValidation<T>(this IServiceCollection services)
         {
             services.AddMvc(options =>
                 {
