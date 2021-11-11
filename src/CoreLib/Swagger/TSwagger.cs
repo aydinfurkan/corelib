@@ -8,7 +8,7 @@ namespace CoreLib.Swagger
 {
     public static class TSwagger
     {
-        public static IServiceCollection AddTSwaggerGen(this IServiceCollection services, string title, string description, string xmlFile, string name="v1", string version="v1", string author="Furkan AYDIN", string email="furkan139aydin@gmail.com", string license="MIT")
+        public static IServiceCollection AddTSwaggerGen(this IServiceCollection services, string title, string description, string name="v1", string version="v1", string author="Furkan AYDIN", string email="furkan139aydin@gmail.com", string license="MIT")
         {
             services.AddSwaggerGen(c =>
             {
@@ -27,9 +27,6 @@ namespace CoreLib.Swagger
                         Name = license,
                     }
                 });
-                
-                var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
-                c.IncludeXmlComments(xmlPath);
             });
 
             return services;
