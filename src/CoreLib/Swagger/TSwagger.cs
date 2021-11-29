@@ -27,6 +27,26 @@ namespace CoreLib.Swagger
                         Name = license,
                     }
                 });
+                c.AddSecurityDefinition("jwtToken", new OpenApiSecurityScheme {
+                    In = ParameterLocation.Header, 
+                    Description = "Please insert jwtToken into field",
+                    Name = "Authorization",
+                    Scheme = "Bearer",
+                    Type = SecuritySchemeType.Http
+                });
+                c.AddSecurityRequirement(new OpenApiSecurityRequirement {
+                    { 
+                        new OpenApiSecurityScheme 
+                        { 
+                            Reference = new OpenApiReference 
+                            { 
+                                Type = ReferenceType.SecurityScheme,
+                                Id = "jwtToken" 
+                            } 
+                        },
+                        new string[] { } 
+                    } 
+                });
             });
 
             return services;
